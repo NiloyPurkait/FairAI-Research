@@ -72,7 +72,7 @@ def mmd_loss( X, z):
     return loss
 
 
-
+@tf.function
 def split_sensitive_X( tensor, col, n):
     '''takes Xn (2D feature tensor) and returns 2 tensors(sensitive features and normal features)'''
     dim = tensor.shape[-1]
